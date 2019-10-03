@@ -37,6 +37,21 @@ constructor ()
     return this.showday=weekday[day];
 
 }
+show:boolean=false;
+buttonName:any="Show account details";
+
+toggle(){
+
+ this.show=!this.show;
+
+ if(this.show)
+ {
+   this.buttonName="Hide account details";
+ }
+ else{
+   this.buttonName="Show account details";
+ }
+}
 
 }
 

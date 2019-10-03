@@ -1,12 +1,14 @@
 <app-component1></app-component1>
 <hello name="{{ name }}"></hello>
-<p *ngIf="accountlist.length > 1">There are many account list </p>
+<p *ngIf="accountlist.length > 1">There are many account list using ngIF &nbsp;<button type="button" (click)="toggle()" id="tog">{{buttonName}}</button></p>
+<ng-container *ngIf="show">
   <ul>
   <li *ngFor="let list of accountlist">
     {{list.Accid}} , {{list.AccName}}
 
   </li>
   </ul>
+  </ng-container>
   <p><b>Two way binding - showing content from textbox into label</b></p>
    <input type="text" [(ngModel)]="setTwowaybind" />
    {{setTwowaybind}}
